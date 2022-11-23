@@ -6,7 +6,20 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Search />
+      <div className="Content">
+        <Search />
+      </div>
+      <p class="text-center link-git">
+        <i class="fa-brands fa-github content-icon"></i>
+        <a
+          href="https://github.com/LaurenRina/weather-react"
+          target="blank"
+          class="contact-link"
+          title="GitHub"
+        >
+          LaurenRina
+        </a>
+      </p>
     </div>
   );
 }

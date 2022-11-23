@@ -23,7 +23,7 @@ li:first-letter {
   max-width: 600px;
   padding: 20px;
 }
-.App {
+.Content {
   display: block;
   border: 2px solid #5a6275;
   border-radius: 17px;
@@ -97,4 +97,18 @@ li:first-letter {
   text-decoration: none;
   color: #000000;
   cursor: default;
+}
+.link-git {
+  padding-top: 15px;
+}
+.contact-link {
+  color: #000000;
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: var(--additional-color);
+}
+.content-icon {
+  color: #000000;
+  font-size: 20px;
 }
