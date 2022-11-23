@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import Cities from "./Cities";
 import Information from "./Information";
 import Weather from "./Weather";
+
 import axios from "axios";
 
 export default function Search() {
   const [name, setName] = useState("");
   const [weather, setWeather] = useState({});
-  const [loaded, setLoaded] = useState(false);
 
   function UpdateName(event) {
     setName(event.target.value);
   }
   function showTemperature(response) {
-    setLoaded(true);
     setWeather({
       temperature: response.data.main.temp.toFixed(0),
       description: response.data.weather[0].description,
@@ -48,17 +47,13 @@ export default function Search() {
     </form>
   );
 
-  if (loaded) {
-    return (
-      <div>
-        {form}
-        <Cities />
-        <hr />
-        <Information city={name} />
-        <Weather weather={weather} />
-      </div>
-    );
-  } else {
-    return form;
-  }
+  return (
+    <div>
+      {form}
+      <Cities />
+      <hr />
+      <Information city="Kyiv" />
+      <Weather weather={weather} />
+    </div>
+  );
 }
