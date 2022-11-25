@@ -19,9 +19,9 @@ export default function Weather(props) {
               <div className="temperature-information">
                 <strong>
                   {" "}
-                  <span id="max">13</span>° /
+                  <span id="max">{props.weather.max}</span>° /
                 </strong>{" "}
-                <span id="min">12</span>°
+                <span id="min">{props.weather.min}</span>°
               </div>
             </div>
           </div>
